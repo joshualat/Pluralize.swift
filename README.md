@@ -59,12 +59,17 @@ Pluralize.rule("(p)erson$", with: "$1ersons")
 ~~~
 
 
-Examples: Irregular Nouns
+Examples
 -------------------------
-| Code                |               |
-| ------------------- | ------------- |
-| "Dwarf".pluralize() | Dwarves       |
-| "Oasis".pluralize() | Oases         |
+| Irregular Nouns          |               | Always Singular in Form   |                  |
+| ------------------------ | ------------- | ------------------------- | ---------------- |
+| "Amnesty".pluralize()    | Amnesties     | "Coffee".pluralize()      | Coffee           |
+| "Dwarf".pluralize()      | Dwarves       | "Compassion".pluralize()  | Compassion       |
+| "Hypothesis".pluralize() | Hypotheses    | "Deer".pluralize()        | Deer             |
+| "Oasis".pluralize()      | Oases         | "Food".pluralize()        | Food             |
+| "Scarf".pluralize()      | Scarves       | "Happiness".pluralize()   | Happiness        |
+| "Tableau".pluralize()    | Tableaux      | "Species".pluralize()     | Species          |
+| "Vertebra".pluralize()   | Vertebrae     | "Stuff".pluralize()       | Stuff            |
 
 
 License
