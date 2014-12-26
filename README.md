@@ -61,7 +61,7 @@ Pluralize.rule("(p)erson$", with: "$1ersons")
 
 Examples: Irregular Nouns
 -------------------------
-|                     | Plural        |
+| Code                |               |
 | ------------------- | ------------- |
 | "Dwarf".pluralize() | Dwarves       |
 | "Oasis".pluralize() | Oases         |
