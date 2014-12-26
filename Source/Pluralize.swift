@@ -1,6 +1,5 @@
 //
 // Pluralize.swift
-//
 // link:
 //     https://github.com/joshualat/Pluralize.swift
 //
@@ -73,18 +72,21 @@ class Pluralize {
             "sleep", "smoke", "smoking", "snow", "soap", "software", "soil",
             "sorrow", "soup", "speed", "spelling", "steam", "stuff", "stupidity",
             "sunshine", "symmetry", "tennis", "thirst", "thunder", "toast",
-            "tolerance", "traffic", "transporation", "travel", "trust", "understanding",
+            "tolerance", "toys", "traffic", "transporation", "travel", "trust", "understanding",
             "unemployment", "unity", "validity", "veal", "vengeance", "violence"]
         
         rule("$", with:"$1s")
         rule("s$", with:"$1ses")
+        rule("(r|l|b)y$", with:"$1ies")
         rule("x$", with:"$1xes")
+        rule("(sh|zz|ss)$", with:"$1es")
         rule("(ax)is", with: "$1es")
         rule("(cact|nucle|alumn|bacill|fung|radi|stimul|syllab)us$", with:"$1i")
         rule("(corp)us$", with:"$1ora")
         rule("sis$", with:"$1ses")
         rule("ch$", with:"$1ches")
-        rule("o$", with:"$1oes")
+        rule("o$", with:"$1os")
+        rule("(buffal|carg|mosquit|torped|zer|vet|her|ech)o$", with:"$1oes")
         rule("fe$", with:"$1ves")
         rule("(thie)f$", with:"$1ves")
         rule("oaf$", with:"$1oaves")

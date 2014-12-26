@@ -8,6 +8,64 @@
 import XCTest
 
 class PluralizeTests: XCTestCase {
+    func testRegularNouns() {
+        var pairs = [
+            ("apple", "apples"),
+            ("book", "books"),
+            ("chair", "chairs"),
+            ("picture", "pictures"),
+            ("page", "pages"),
+            ("key", "keys"),
+            ("computer", "computers"),
+            ("box", "boxes"),
+            ("wish", "wishes"),
+            ("kiss", "kisses"),
+            ("watch", "watches"),
+            ("buzz", "buzzes"),
+            ("garage", "garages"),
+            ("judge", "judges"),
+            ("photo", "photos"),
+            ("avocado", "avocados"),
+            ("radio", "radios"),
+            ("baby", "babies"),
+            ("fry", "fries"),
+            ("fly", "flies"),
+            ("ally", "allies"),
+            ("boy", "boys"),
+            ("toys", "toys"),
+            ("belief", "beliefs"),
+            ("chief", "chiefs")
+        ]
+        
+        for (singular, plural) in pairs {
+            XCTAssertEqual(singular.pluralize(), plural, "Plural of \(singular) should be \(plural)")
+        }
+    }
+    
+    func testUncountableNouns() {
+        var uncountables = [
+            "air",
+            "assistance",
+            "coffee",
+            "envy",
+            "engineering",
+            "gratitude",
+            "help",
+            "homework",
+            "hunger",
+            "information",
+            "livestock",
+            "mathematics",
+            "smoke",
+            "software",
+            "validity"
+        ]
+        
+        for word in uncountables {
+            XCTAssertEqual(word.pluralize(), word, "Plural of \(word) should be \(word)")
+        }
+    }
+    
     func testIrregularNouns() {
         var pairs = [
             ("addendum", "addenda"),
