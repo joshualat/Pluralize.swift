@@ -57,7 +57,7 @@ Pluralize.uncountable("water")
 // Water
 ~~~
 
-Adding Custom Rules: New RegEx Rule
+Adding Custom Rules: New Regex Rule
 -----------------------------------
 ~~~ swift
 "Person".pluralize()
@@ -68,6 +68,20 @@ Pluralize.rule("(p)erson$", with: "$1ersons")
 // Persons
 "Spokesperson".pluralize()
 // Spokespersons
+~~~
+
+Example Regex Rules:
+--------------------
+~~~ swift
+Pluralize.rule("(criteri|phenomen)on$", with:"$1a")
+Pluralize.rule("(potat|tomat|volcan)o$", with:"$1oes")
+Pluralize.rule("^(|wo|work)man$", with: "$1men")
+Pluralize.rule("(f)oot$", with: "$1eet")
+Pluralize.rule("lf$", with: "$1lves")
+Pluralize.rule("(t)ooth$", with: "$1eeth")
+Pluralize.rule("(g)oose$", with: "$1eese")
+Pluralize.rule("^(c)hild$", with: "$1hildren")
+Pluralize.rule("^(o)x$", with: "$1xen")
 ~~~
 
 
