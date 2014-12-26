@@ -1,6 +1,6 @@
 //
 // pluralize.swift
-// link: 
+// link:
 //     https://github.com/joshualat/Pluralize.swift
 //
 // usage: 
@@ -50,7 +50,7 @@ class Pluralize {
             "courage", "currency", "dancing", "danger", "data", "delight",
             "dignity", "dirt", "distribution", "dust", "economics", "education",
             "electricity", "employment", "engineering", "envy", "equipment",
-            "ethics", "evidence", "evolution", "faith", "fame", "flour", "flu",
+            "ethics", "evidence", "evolution", "faith", "fame", "fish", "flour", "flu",
             "food", "freedom", "fuel", "fun", "furniture", "garbage", "garlic",
             "genetics", "gold", "golf", "gossip", "grammar", "gratitude", "grief",
             "ground", "guilt", "gymnastics", "hair", "happiness", "hardware",
@@ -78,11 +78,14 @@ class Pluralize {
         rule("$", with:"$1s")
         rule("s$", with:"$1ses")
         rule("x$", with:"$1xes")
-        rule("(cact|nucle|alumn|bacill|fung)us$", with:"$1i")
+        rule("(ax)is", with: "$1es")
+        rule("(cact|nucle|alumn|bacill|fung|radi|stimul|syllab)us$", with:"$1i")
+        rule("(corp)us$", with:"$1ora")
         rule("sis$", with:"$1ses")
         rule("ch$", with:"$1ches")
         rule("o$", with:"$1oes")
         rule("fe$", with:"$1ves")
+        rule("(thie)f$", with:"$1ves")
         rule("oaf$", with:"$1oaves")
         rule("um$", with:"$1a")
         rule("ium$", with:"$1ia")
@@ -90,7 +93,7 @@ class Pluralize {
         rule("(nebul)a", with:"$1ae")
         rule("(criteri|phenomen)on$", with:"$1a")
         rule("(potat|tomat|volcan)o$", with:"$1oes")
-        rule("^(|wo|work)man$", with: "$1men")
+        rule("^(|wo|work|fire)man$", with: "$1men")
         rule("(f)oot$", with: "$1eet")
         rule("lf$", with: "$1lves")
         rule("(t)ooth$", with: "$1eeth")
@@ -100,16 +103,17 @@ class Pluralize {
         rule("^(p)erson$", with: "$1eople")
         rule("(m|l)ouse$", with: "$1ice")
         rule("^(d)ie$", with: "$1ice")
-        rule("^(alg|vertebr)a$", with: "$1ae")
+        rule("^(alg|vertebr|vit)a$", with: "$1ae")
         rule("^(a)lumna$", with: "$1lumnae")
         rule("^(a)pparatus$", with: "$1pparatuses")
+        rule("^(ind)ex$", with: "$1ices")
         rule("^(append|matr)ix$", with: "$1ices")
         rule("^(b|tabl)eau$", with: "$1eaux")
         rule("arf$", with: "$1arves")
         rule("(embarg)o$", with: "$1oes")
         rule("(gen)us$", with: "$1era")
         rule("(r)oof$", with: "$1oofs")
-        rule("(l)eaf$", with: "$1eafs")
+        rule("(l)eaf$", with: "$1eaves")
         rule("(millen)ium$", with: "$1ia")
         rule("(th)at$", with: "$1ose")
         rule("(th)is$", with: "$1ese")
