@@ -1,5 +1,6 @@
 //
-// pluralize.swift
+// Pluralize.swift
+//
 // link:
 //     https://github.com/joshualat/Pluralize.swift
 //
