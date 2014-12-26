@@ -1,5 +1,7 @@
 //
 // pluralize.swift
+// link: 
+//     https://github.com/joshualat/Pluralize.swift
 //
 // usage: 
 //     "Tooth".pluralize

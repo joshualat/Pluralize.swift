@@ -3,21 +3,61 @@ Pluralize.swift
 
 Great Swift String Pluralize Extension
 
+- case-insensitive
+- tons of rules for irregular nouns (plural form)
+- supports uncountable nouns
+- allows dynamic addition of rules
+
+
 Basic usage
 -----------
 ~~~ swift 
-"Tooth".pluralize()
-// Teeth
-
-"tooth".pluralize()
-// teeth
+"Person".pluralize()
+// People
 
 "Wolf".pluralize(count: 1)
 // Wolf
 
-"Furniture".pluralize()
-// Furniture
+"Person".pluralize(with: "Persons")
+// Persons
 ~~~
+
+Adding Custom Rules: Singular = Plural
+--------------------------------------
+~~~ swift
+"Shrimp".pluralize()
+// Shrimps
+
+Pluralize.unchanging("shrimp")
+
+"Shrimp".pluralize()
+// Shrimp
+~~~
+
+Adding Custom Rules: Uncountable
+--------------------------------
+~~~ swift
+"Water".pluralize()
+// Waters
+
+Pluralize.uncountable("water")
+"Water".pluralize()
+// Water
+~~~
+
+Adding Custom Rules: New RegEx Rule
+-----------------------------------
+~~~ swift
+"Person".pluralize()
+// People
+
+Pluralize.rule("(p)erson$", with: "$1ersons")
+"Person".pluralize()
+// Persons
+"Spokesperson".pluralize()
+// Spokespersons
+~~~
+
 
 License
 -------
