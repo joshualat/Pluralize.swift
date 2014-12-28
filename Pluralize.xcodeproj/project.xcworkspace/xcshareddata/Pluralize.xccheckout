@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>35690B9E-9BDA-4B4B-9E68-62B4FD195CD5</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Pluralize</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>08F94D3BF36204207F255710207C2A035E3F9914</key>
+		<string>https://github.com/joshualat/Pluralize.swift.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Pluralize.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>08F94D3BF36204207F255710207C2A035E3F9914</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/joshualat/Pluralize.swift.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>08F94D3BF36204207F255710207C2A035E3F9914</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>08F94D3BF36204207F255710207C2A035E3F9914</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Pluralize.swift</string>
+		</dict>
+	</array>
+</dict>
+</plist>
