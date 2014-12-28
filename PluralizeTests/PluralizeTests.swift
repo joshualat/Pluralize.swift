@@ -6,6 +6,7 @@
 //
 
 import XCTest
+import Pluralize
 
 class PluralizeTests: XCTestCase {
     func testRegularNouns() {

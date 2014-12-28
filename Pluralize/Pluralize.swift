@@ -3,7 +3,7 @@
 // link:
 //     https://github.com/joshualat/Pluralize.swift
 //
-// usage: 
+// usage:
 //     "Tooth".pluralize
 //     "Nutrtion".pluralize
 //     "House".pluralize(count: 1)
@@ -34,11 +34,11 @@
 
 import Foundation
 
-class Pluralize {
+public class Pluralize {
     var uncountables:[String] = []
     var rules:[(rule: String, template: String)] = []
     
-    init() {
+    public init() {
         uncountables = [
             "access", "accommodation", "adulthood", "advertising", "advice",
             "aggression", "aid", "air", "alcohol", "anger", "applause",
@@ -133,7 +133,7 @@ class Pluralize {
         unchanging("species")
     }
     
-    class func apply(var word: String) -> String {
+    public class func apply(var word: String) -> String {
         if contains(sharedInstance.uncountables, word.lowercaseString) || countElements(word) == 0 {
             return word
         } else {
@@ -148,19 +148,19 @@ class Pluralize {
         return word
     }
     
-    class func rule(rule: String, with template: String) {
+    public class func rule(rule: String, with template: String) {
         sharedInstance.rule(rule, with: template)
     }
     
-    class func uncountable(word: String) {
+    public class func uncountable(word: String) {
         sharedInstance.uncountable(word)
     }
     
-    class func unchanging(word: String) {
+    public class func unchanging(word: String) {
         sharedInstance.unchanging(word)
     }
     
-    class var sharedInstance : Pluralize {
+    public class var sharedInstance : Pluralize {
         struct Static {
             static var onceToken : dispatch_once_t = 0
             static var instance : Pluralize? = nil
@@ -194,7 +194,7 @@ class Pluralize {
 }
 
 extension String {
-    func pluralize(count: Int = 2, with: String = "") -> String {
+    public func pluralize(count: Int = 2, with: String = "") -> String {
         if count == 1 {
             return self
         } else {
