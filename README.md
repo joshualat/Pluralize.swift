@@ -12,6 +12,8 @@ Great Swift String Pluralize Extension
 Basic usage
 -----------
 ~~~ swift 
+import Pluralize
+
 "Person".pluralize()
 // People
 
@@ -83,6 +85,21 @@ Pluralize.rule("(g)oose$", with: "$1eese")
 Pluralize.rule("^(c)hild$", with: "$1hildren")
 Pluralize.rule("^(o)x$", with: "$1xen")
 ~~~
+
+Installation
+------------
+
+To install Pluralize.swift:
+
+ 1. _git clone https://github.com/joshualat/Pluralize.swift.git_ inside your project folder
+ 2. Drag the **Pluralize.xcodeproj** file into the file navigator of your project.
+ 3. Ensure that the deployment target of **Pluralize.framework** matches that of the application target.
+ 4. In your target’s **Build Phases**, add **Pluralize**
+    to the **Target Dependencies** build phase.
+ 5. Add the appropriate **Pluralize.framework** product to the
+    **Link Binary With Libraries** build phase.
+ 6. Add the same **Pluralize.framework** to a **Copy Files** build phase with a
+    **Frameworks** destination.
 
 
 License
