@@ -8,6 +8,7 @@ Great Swift String Pluralize Extension
 - supports uncountable nouns
 - allows dynamic addition of rules
 
+Read [this post](http://joshualat.com/posts/pluralize-swift/) for more information.
 
 Basic usage
 -----------
