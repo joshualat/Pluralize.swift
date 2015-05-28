@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Joshua Lat. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
 //! Project version number for Pluralize.
 FOUNDATION_EXPORT double PluralizeVersionNumber;
