@@ -77,7 +77,7 @@ public class Pluralize {
         
         rule("$", with:"$1s")
         rule("s$", with:"$1ses")
-        rule("(r|l|b)y$", with:"$1ies")
+        rule("(t|r|l|b)y$", with:"$1ies")
         rule("x$", with:"$1xes")
         rule("(sh|zz|ss)$", with:"$1es")
         rule("(ax)is", with: "$1es")

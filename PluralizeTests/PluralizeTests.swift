@@ -35,7 +35,9 @@ class PluralizeTests: XCTestCase {
             ("boy", "boys"),
             ("toys", "toys"),
             ("belief", "beliefs"),
-            ("chief", "chiefs")
+            ("chief", "chiefs"),
+            ("city", "cities"),
+            ("amnesty", "amnesties")
         ]
         
         for (singular, plural) in pairs {
