@@ -45,7 +45,7 @@ public class Pluralize {
             "arithmetic", "art", "assistance", "athletics", "attention",
             "bacon", "baggage", "ballet", "beauty", "beef", "beer", "biology",
             "botany", "bread", "butter", "carbon", "cash", "chaos", "cheese",
-            "chess", "childhood", "clothing", "coal", "coffee", "commerce",
+            "chess", "childhood", "clothing", "coal", "commerce",
             "compassion", "comprehension", "content", "corruption", "cotton",
             "courage", "currency", "dancing", "danger", "data", "delight",
             "dignity", "dirt", "distribution", "dust", "economics", "education",
