@@ -12,7 +12,7 @@ Read [this post](http://joshualat.com/posts/pluralize-swift/) for more informati
 
 Basic usage
 -----------
-~~~ swift 
+~~~ swift
 import Pluralize
 
 "Person".pluralize()
@@ -90,7 +90,15 @@ Pluralize.rule("^(o)x$", with: "$1xen")
 Installation
 ------------
 
-To install Pluralize.swift:
+**Cocoapods**
+
+<code>pod 'DateTools'</code>
+
+in code then
+
+<code>import Pluralize_swift</code>
+
+**Manual Installation**
 
  1. _git clone https://github.com/joshualat/Pluralize.swift.git_ inside your project folder
  2. Drag the **Pluralize.xcodeproj** file into the file navigator of your project.
