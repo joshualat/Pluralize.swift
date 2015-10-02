@@ -92,7 +92,7 @@ Installation
 
 **Cocoapods**
 
-<code>pod 'DateTools'</code>
+<code>pod 'Pluralize.swift'</code>
 
 in code then
 
