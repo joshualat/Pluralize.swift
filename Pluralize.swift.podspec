@@ -33,7 +33,4 @@ Pod::Spec.new do |s|
   s.tvos.platform = '9.0'
 
   s.source_files = 'Pluralize/*'
-  s.resource_bundles = {
-    'Pluralize.swift' => ['Pod/Assets/*.png']
-  }
 end
