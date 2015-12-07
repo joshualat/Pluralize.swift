@@ -32,8 +32,5 @@ Pod::Spec.new do |s|
   s.osx.deployment_target = '10.9'
   s.tvos.platform = '9.0'
   s.tvos.deployment_target = '9.0'
-  s.source_files = 'Pluralize/*'
-  s.resource_bundles = {
-    'Pluralize.swift' => ['Pod/*.plist']
-  }
+  s.source_files = 'Pluralize/*.swift'
 end
