@@ -87,6 +87,12 @@ Pluralize.rule("^(c)hild$", with: "$1hildren")
 Pluralize.rule("^(o)x$", with: "$1xen")
 ~~~
 
+Adding Custom Rules: Whole Words
+--------------------
+~~~ swift
+Pluralize.rule("were", with: "was")
+~~~
+
 Installation
 ------------
 
