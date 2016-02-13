@@ -37,7 +37,7 @@ import Foundation
 public class Pluralize {
     var uncountables:[String] = []
     var rules:[(rule: String, template: String)] = []
-    
+
     public init() {
         uncountables = [
             "access", "accommodation", "adulthood", "advertising", "advice",
@@ -74,7 +74,7 @@ public class Pluralize {
             "sunshine", "symmetry", "tennis", "thirst", "thunder", "toast",
             "tolerance", "toys", "traffic", "transporation", "travel", "trust", "understanding",
             "unemployment", "unity", "validity", "veal", "vengeance", "violence"]
-        
+
         rule("$", with:"$1s")
         rule("s$", with:"$1ses")
         rule("(t|r|l|b)y$", with:"$1ies")
@@ -120,7 +120,7 @@ public class Pluralize {
         rule("(millen)ium$", with: "$1ia")
         rule("(th)at$", with: "$1ose")
         rule("(th)is$", with: "$1ese")
-        
+
         unchanging("sheep")
         unchanging("deer")
         unchanging("moose")
@@ -132,62 +132,62 @@ public class Pluralize {
         unchanging("scissors")
         unchanging("species")
     }
-    
+
     public class func apply(word: String) -> String {
-        if sharedInstance.uncountables.contains(word.lowercaseString) || word.characters.count == 0 {
+        guard !(sharedInstance.uncountables.contains(word.lowercaseString) || word.characters.count == 0) else {
             return word
-        } else {
-            for pair in sharedInstance.rules {
-                let newValue = regexReplace(word, pattern: pair.rule, template: pair.template)
-                if newValue != word {
-                    return newValue
-                }
+        }
+
+        for pair in sharedInstance.rules {
+            let newValue = regexReplace(word, pattern: pair.rule, template: pair.template)
+            if newValue != word {
+                return newValue
             }
         }
-        
+
         return word
     }
-    
+
     public class func rule(rule: String, with template: String) {
         sharedInstance.rule(rule, with: template)
     }
-    
+
     public class func uncountable(word: String) {
         sharedInstance.uncountable(word)
     }
-    
+
     public class func unchanging(word: String) {
         sharedInstance.unchanging(word)
     }
-    
+
     public class var sharedInstance : Pluralize {
         struct Static {
             static var onceToken : dispatch_once_t = 0
             static var instance : Pluralize? = nil
         }
-        
+
         dispatch_once(&Static.onceToken) {
             Static.instance = Pluralize()
         }
-        
+
         return Static.instance!
     }
-    
+
     private class func regexReplace(input: String, pattern: String, template: String) -> String {
         let regex = try! NSRegularExpression(pattern: pattern, options: .CaseInsensitive)
-        let range = NSMakeRange(0, input.characters.count)
+        let range = NSRange(location: 0, length: input.characters.count)
         let output = regex.stringByReplacingMatchesInString(input, options: [], range: range, withTemplate: template)
         return output
     }
-    
+
     private func rule(rule: String, with template: String) {
         rules.insert((rule: rule, template: template), atIndex: 0)
     }
-    
+
     private func uncountable(word: String) {
         uncountables.insert(word.lowercaseString, atIndex: 0)
     }
-    
+
     private func unchanging(word: String) {
         uncountables.insert(word.lowercaseString, atIndex: 0)
     }
@@ -195,15 +195,9 @@ public class Pluralize {
 
 extension String {
     public func pluralize(count: Int = 2, with: String = "") -> String {
-        if count == 1 {
-            return self
-        } else {
-            if with.length != 0 {
-                return with
-            } else {
-                return Pluralize.apply(self)
-            }
-        }
+        guard !(count == 1) else { return self }
+        guard with.length != 0 else { return Pluralize.apply(self) }
+        return with
     }
 
     // Workaround to allow us to use `count` as an argument name in pluralize() above.
