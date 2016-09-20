@@ -75,71 +75,71 @@ public class Pluralize {
             "tolerance", "toys", "traffic", "transporation", "travel", "trust", "understanding",
             "unemployment", "unity", "validity", "veal", "vengeance", "violence"]
 
-        rule("$", with:"$1s")
-        rule("s$", with:"$1ses")
-        rule("(t|r|l|b)y$", with:"$1ies")
-        rule("x$", with:"$1xes")
-        rule("(sh|zz|ss)$", with:"$1es")
-        rule("(ax)is", with: "$1es")
-        rule("(cact|nucle|alumn|bacill|fung|radi|stimul|syllab)us$", with:"$1i")
-        rule("(corp)us$", with:"$1ora")
-        rule("sis$", with:"$1ses")
-        rule("ch$", with:"$1ches")
-        rule("o$", with:"$1os")
-        rule("(buffal|carg|mosquit|torped|zer|vet|her|ech)o$", with:"$1oes")
-        rule("fe$", with:"$1ves")
-        rule("(thie)f$", with:"$1ves")
-        rule("oaf$", with:"$1oaves")
-        rule("um$", with:"$1a")
-        rule("ium$", with:"$1ia")
-        rule("oof$", with:"$1ooves")
-        rule("(nebul)a", with:"$1ae")
-        rule("(criteri|phenomen)on$", with:"$1a")
-        rule("(potat|tomat|volcan)o$", with:"$1oes")
-        rule("^(|wo|work|fire)man$", with: "$1men")
-        rule("(f)oot$", with: "$1eet")
-        rule("lf$", with: "$1lves")
-        rule("(t)ooth$", with: "$1eeth")
-        rule("(g)oose$", with: "$1eese")
-        rule("^(c)hild$", with: "$1hildren")
-        rule("^(o)x$", with: "$1xen")
-        rule("^(p)erson$", with: "$1eople")
-        rule("(m|l)ouse$", with: "$1ice")
-        rule("^(d)ie$", with: "$1ice")
-        rule("^(alg|vertebr|vit)a$", with: "$1ae")
-        rule("^(a)lumna$", with: "$1lumnae")
-        rule("^(a)pparatus$", with: "$1pparatuses")
-        rule("^(ind)ex$", with: "$1ices")
-        rule("^(append|matr)ix$", with: "$1ices")
-        rule("^(b|tabl)eau$", with: "$1eaux")
-        rule("arf$", with: "$1arves")
-        rule("(embarg)o$", with: "$1oes")
-        rule("(gen)us$", with: "$1era")
-        rule("(r)oof$", with: "$1oofs")
-        rule("(l)eaf$", with: "$1eaves")
-        rule("(millen)ium$", with: "$1ia")
-        rule("(th)at$", with: "$1ose")
-        rule("(th)is$", with: "$1ese")
+        add(rule: "$", with:"$1s")
+        add(rule: "s$", with:"$1ses")
+        add(rule: "(t|r|l|b)y$", with:"$1ies")
+        add(rule: "x$", with:"$1xes")
+        add(rule: "(sh|zz|ss)$", with:"$1es")
+        add(rule: "(ax)is", with: "$1es")
+        add(rule: "(cact|nucle|alumn|bacill|fung|radi|stimul|syllab)us$", with:"$1i")
+        add(rule: "(corp)us$", with:"$1ora")
+        add(rule: "sis$", with:"$1ses")
+        add(rule: "ch$", with:"$1ches")
+        add(rule: "o$", with:"$1os")
+        add(rule: "(buffal|carg|mosquit|torped|zer|vet|her|ech)o$", with:"$1oes")
+        add(rule: "fe$", with:"$1ves")
+        add(rule: "(thie)f$", with:"$1ves")
+        add(rule: "oaf$", with:"$1oaves")
+        add(rule: "um$", with:"$1a")
+        add(rule: "ium$", with:"$1ia")
+        add(rule: "oof$", with:"$1ooves")
+        add(rule: "(nebul)a", with:"$1ae")
+        add(rule: "(criteri|phenomen)on$", with:"$1a")
+        add(rule: "(potat|tomat|volcan)o$", with:"$1oes")
+        add(rule: "^(|wo|work|fire)man$", with: "$1men")
+        add(rule: "(f)oot$", with: "$1eet")
+        add(rule: "lf$", with: "$1lves")
+        add(rule: "(t)ooth$", with: "$1eeth")
+        add(rule: "(g)oose$", with: "$1eese")
+        add(rule: "^(c)hild$", with: "$1hildren")
+        add(rule: "^(o)x$", with: "$1xen")
+        add(rule: "^(p)erson$", with: "$1eople")
+        add(rule: "(m|l)ouse$", with: "$1ice")
+        add(rule: "^(d)ie$", with: "$1ice")
+        add(rule: "^(alg|vertebr|vit)a$", with: "$1ae")
+        add(rule: "^(a)lumna$", with: "$1lumnae")
+        add(rule: "^(a)pparatus$", with: "$1pparatuses")
+        add(rule: "^(ind)ex$", with: "$1ices")
+        add(rule: "^(append|matr)ix$", with: "$1ices")
+        add(rule: "^(b|tabl)eau$", with: "$1eaux")
+        add(rule: "arf$", with: "$1arves")
+        add(rule: "(embarg)o$", with: "$1oes")
+        add(rule: "(gen)us$", with: "$1era")
+        add(rule: "(r)oof$", with: "$1oofs")
+        add(rule: "(l)eaf$", with: "$1eaves")
+        add(rule: "(millen)ium$", with: "$1ia")
+        add(rule: "(th)at$", with: "$1ose")
+        add(rule: "(th)is$", with: "$1ese")
 
-        unchanging("sheep")
-        unchanging("deer")
-        unchanging("moose")
-        unchanging("swine")
-        unchanging("bison")
-        unchanging("corps")
-        unchanging("means")
-        unchanging("series")
-        unchanging("scissors")
-        unchanging("species")
+        unchanging(word: "sheep")
+        unchanging(word: "deer")
+        unchanging(word: "moose")
+        unchanging(word: "swine")
+        unchanging(word: "bison")
+        unchanging(word: "corps")
+        unchanging(word: "means")
+        unchanging(word: "series")
+        unchanging(word: "scissors")
+        unchanging(word: "species")
     }
 
     public class func apply(word: String) -> String {
-        guard !(sharedInstance.uncountables.contains(word.lowercaseString) || word.characters.count == 0) else {
+        guard !(sharedInstance.uncountables.contains(word.lowercased()) || word.characters.count == 0) else {
             return word
         }
 
         for pair in sharedInstance.rules {
-            let newValue = regexReplace(word, pattern: pair.rule, template: pair.template)
+            let newValue = regexReplace(input: word, pattern: pair.rule, template: pair.template)
             if newValue != word {
                 return newValue
             }
@@ -148,55 +148,46 @@ public class Pluralize {
         return word
     }
 
-    public class func rule(rule: String, with template: String) {
-        sharedInstance.rule(rule, with: template)
+    public class func add(rule: String, with template: String) {
+        sharedInstance.add(rule: rule, with: template)
     }
 
     public class func uncountable(word: String) {
-        sharedInstance.uncountable(word)
+        sharedInstance.uncountable(word: word)
     }
 
     public class func unchanging(word: String) {
-        sharedInstance.unchanging(word)
+        sharedInstance.unchanging(word: word)
     }
 
-    public class var sharedInstance : Pluralize {
-        struct Static {
-            static var onceToken : dispatch_once_t = 0
-            static var instance : Pluralize? = nil
-        }
-
-        dispatch_once(&Static.onceToken) {
-            Static.instance = Pluralize()
-        }
-
-        return Static.instance!
+    class var sharedInstance : Pluralize {
+        return Pluralize()
     }
 
     private class func regexReplace(input: String, pattern: String, template: String) -> String {
-        let regex = try! NSRegularExpression(pattern: pattern, options: .CaseInsensitive)
+        let regex = try! NSRegularExpression(pattern: pattern, options: .caseInsensitive)
         let range = NSRange(location: 0, length: input.characters.count)
-        let output = regex.stringByReplacingMatchesInString(input, options: [], range: range, withTemplate: template)
+        let output = regex.stringByReplacingMatches(in: input, options: [], range: range, withTemplate: template)
         return output
     }
 
-    private func rule(rule: String, with template: String) {
-        rules.insert((rule: rule, template: template), atIndex: 0)
+    private func add(rule: String, with template: String) {
+        rules.insert((rule: rule, template: template), at: 0)
     }
 
     private func uncountable(word: String) {
-        uncountables.insert(word.lowercaseString, atIndex: 0)
+        uncountables.insert(word.lowercased(), at: 0)
     }
 
     private func unchanging(word: String) {
-        uncountables.insert(word.lowercaseString, atIndex: 0)
+        uncountables.insert(word.lowercased(), at: 0)
     }
 }
 
 extension String {
     public func pluralize(count: Int = 2, with: String = "") -> String {
         guard !(count == 1) else { return self }
-        guard with.length != 0 else { return Pluralize.apply(self) }
+        guard with.length != 0 else { return Pluralize.apply(word: self) }
         return with
     }
 
