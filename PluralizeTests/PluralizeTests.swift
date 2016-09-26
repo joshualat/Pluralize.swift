@@ -183,4 +183,16 @@ class PluralizeTests: XCTestCase {
             XCTAssertEqual(singular.pluralize(), plural, "Plural of \(singular) should be \(plural)")
         }
     }
+  
+    func testAddingRules() {
+        let singular = "word"
+        let plural = "words"
+        Pluralize.add(rule: singular, with: plural)
+        XCTAssertEqual(singular.pluralize(), plural, "Plural of \(singular) should be \(plural)")
+      
+        // Override rule with another rule
+        let overridingPlural = "wordies"
+        Pluralize.add(rule: singular, with: overridingPlural)
+        XCTAssertEqual(singular.pluralize(), overridingPlural, "Plural of \(singular) should be \(overridingPlural)")
+    }
 }

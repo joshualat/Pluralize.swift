@@ -160,9 +160,7 @@ public class Pluralize {
         sharedInstance.unchanging(word: word)
     }
 
-    class var sharedInstance : Pluralize {
-        return Pluralize()
-    }
+    static var sharedInstance = Pluralize()
 
     private class func regexReplace(input: String, pattern: String, template: String) -> String {
         let regex = try! NSRegularExpression(pattern: pattern, options: .caseInsensitive)
