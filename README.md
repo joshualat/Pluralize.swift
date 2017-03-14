@@ -13,7 +13,7 @@ Read [this post](http://joshualat.com/posts/pluralize-swift/) for more informati
 Basic usage
 -----------
 ~~~ swift
-import Pluralize
+import Pluralize_swift
 
 "Person".pluralize()
 // People
