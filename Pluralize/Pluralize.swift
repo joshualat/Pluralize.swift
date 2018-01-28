@@ -1,3 +1,4 @@
+
 //
 // Pluralize.swift
 // link:
@@ -31,14 +32,15 @@
 // LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
 // OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 // WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
 import Foundation
 
 public class Pluralize {
+    static let sharedInstance = Pluralize()
+    
     var uncountables:[String] = []
     var rules:[(rule: String, template: String)] = []
-
-    public init() {
+    
+    private init() {
         uncountables = [
             "access", "accommodation", "adulthood", "advertising", "advice",
             "aggression", "aid", "air", "alcohol", "anger", "applause",
@@ -74,53 +76,53 @@ public class Pluralize {
             "sunshine", "symmetry", "tennis", "thirst", "thunder", "toast",
             "tolerance", "toys", "traffic", "transporation", "travel", "trust", "understanding",
             "unemployment", "unity", "validity", "veal", "vengeance", "violence"]
-
-        add(rule: "$", with:"$1s")
-        add(rule: "s$", with:"$1ses")
-        add(rule: "(t|r|l|b)y$", with:"$1ies")
-        add(rule: "x$", with:"$1xes")
-        add(rule: "(sh|zz|ss)$", with:"$1es")
-        add(rule: "(ax)is", with: "$1es")
-        add(rule: "(cact|nucle|alumn|bacill|fung|radi|stimul|syllab)us$", with:"$1i")
-        add(rule: "(corp)us$", with:"$1ora")
-        add(rule: "sis$", with:"$1ses")
-        add(rule: "ch$", with:"$1ches")
-        add(rule: "o$", with:"$1os")
-        add(rule: "(buffal|carg|mosquit|torped|zer|vet|her|ech)o$", with:"$1oes")
-        add(rule: "fe$", with:"$1ves")
-        add(rule: "(thie)f$", with:"$1ves")
-        add(rule: "oaf$", with:"$1oaves")
-        add(rule: "um$", with:"$1a")
-        add(rule: "ium$", with:"$1ia")
-        add(rule: "oof$", with:"$1ooves")
-        add(rule: "(nebul)a", with:"$1ae")
-        add(rule: "(criteri|phenomen)on$", with:"$1a")
-        add(rule: "(potat|tomat|volcan)o$", with:"$1oes")
-        add(rule: "^(|wo|work|fire)man$", with: "$1men")
-        add(rule: "(f)oot$", with: "$1eet")
-        add(rule: "lf$", with: "$1lves")
-        add(rule: "(t)ooth$", with: "$1eeth")
-        add(rule: "(g)oose$", with: "$1eese")
-        add(rule: "^(c)hild$", with: "$1hildren")
-        add(rule: "^(o)x$", with: "$1xen")
-        add(rule: "^(p)erson$", with: "$1eople")
-        add(rule: "(m|l)ouse$", with: "$1ice")
-        add(rule: "^(d)ie$", with: "$1ice")
-        add(rule: "^(alg|vertebr|vit)a$", with: "$1ae")
-        add(rule: "^(a)lumna$", with: "$1lumnae")
-        add(rule: "^(a)pparatus$", with: "$1pparatuses")
-        add(rule: "^(ind)ex$", with: "$1ices")
-        add(rule: "^(append|matr)ix$", with: "$1ices")
-        add(rule: "^(b|tabl)eau$", with: "$1eaux")
-        add(rule: "arf$", with: "$1arves")
-        add(rule: "(embarg)o$", with: "$1oes")
-        add(rule: "(gen)us$", with: "$1era")
-        add(rule: "(r)oof$", with: "$1oofs")
-        add(rule: "(l)eaf$", with: "$1eaves")
-        add(rule: "(millen)ium$", with: "$1ia")
-        add(rule: "(th)at$", with: "$1ose")
-        add(rule: "(th)is$", with: "$1ese")
-
+        
+        rule(rule: "$", with:"$1s")
+        rule(rule: "s$", with:"$1ses")
+        rule(rule: "(t|r|l|b)y$", with:"$1ies")
+        rule(rule: "x$", with:"$1xes")
+        rule(rule: "(sh|zz|ss)$", with:"$1es")
+        rule(rule: "(ax)is", with: "$1es")
+        rule(rule: "(cact|nucle|alumn|bacill|fung|radi|stimul|syllab)us$", with:"$1i")
+        rule(rule: "(corp)us$", with:"$1ora")
+        rule(rule: "sis$", with:"$1ses")
+        rule(rule: "ch$", with:"$1ches")
+        rule(rule: "o$", with:"$1os")
+        rule(rule: "(buffal|carg|mosquit|torped|zer|vet|her|ech)o$", with:"$1oes")
+        rule(rule: "fe$", with:"$1ves")
+        rule(rule: "(thie)f$", with:"$1ves")
+        rule(rule: "oaf$", with:"$1oaves")
+        rule(rule: "um$", with:"$1a")
+        rule(rule: "ium$", with:"$1ia")
+        rule(rule: "oof$", with:"$1ooves")
+        rule(rule: "(nebul)a", with:"$1ae")
+        rule(rule: "(criteri|phenomen)on$", with:"$1a")
+        rule(rule: "(potat|tomat|volcan)o$", with:"$1oes")
+        rule(rule: "^(|wo|work|fire)man$", with: "$1men")
+        rule(rule: "(f)oot$", with: "$1eet")
+        rule(rule: "lf$", with: "$1lves")
+        rule(rule: "(t)ooth$", with: "$1eeth")
+        rule(rule: "(g)oose$", with: "$1eese")
+        rule(rule: "^(c)hild$", with: "$1hildren")
+        rule(rule: "^(o)x$", with: "$1xen")
+        rule(rule: "^(p)erson$", with: "$1eople")
+        rule(rule: "(m|l)ouse$", with: "$1ice")
+        rule(rule: "^(d)ie$", with: "$1ice")
+        rule(rule: "^(alg|vertebr|vit)a$", with: "$1ae")
+        rule(rule: "^(a)lumna$", with: "$1lumnae")
+        rule(rule: "^(a)pparatus$", with: "$1pparatuses")
+        rule(rule: "^(ind)ex$", with: "$1ices")
+        rule(rule: "^(append|matr)ix$", with: "$1ices")
+        rule(rule: "^(b|tabl)eau$", with: "$1eaux")
+        rule(rule: "arf$", with: "$1arves")
+        rule(rule: "(embarg)o$", with: "$1oes")
+        rule(rule: "(gen)us$", with: "$1era")
+        rule(rule: "(r)oof$", with: "$1oofs")
+        rule(rule: "(l)eaf$", with: "$1eaves")
+        rule(rule: "(millen)ium$", with: "$1ia")
+        rule(rule: "(th)at$", with: "$1ose")
+        rule(rule: "(th)is$", with: "$1ese")
+        
         unchanging(word: "sheep")
         unchanging(word: "deer")
         unchanging(word: "moose")
@@ -132,53 +134,50 @@ public class Pluralize {
         unchanging(word: "scissors")
         unchanging(word: "species")
     }
-
+    
     public class func apply(word: String) -> String {
-        guard !(sharedInstance.uncountables.contains(word.lowercased()) || word.characters.count == 0) else {
+        if sharedInstance.uncountables.contains(word.lowercased()) || String(word).count == 0 {
             return word
-        }
-
-        for pair in sharedInstance.rules {
-            let newValue = regexReplace(input: word, pattern: pair.rule, template: pair.template)
-            if newValue != word {
-                return newValue
+        } else {
+            for pair in sharedInstance.rules {
+                let newValue = regexReplace(input: word, pattern: pair.rule, template: pair.template)
+                if newValue != word {
+                    return newValue
+                }
             }
         }
-
+        
         return word
     }
-
-    public class func add(rule: String, with template: String) {
-        sharedInstance.add(rule: rule, with: template)
+    
+    public class func rule(rule: String, with template: String) {
+        sharedInstance.rule(rule: rule, with: template)
     }
-
+    
     public class func uncountable(word: String) {
         sharedInstance.uncountable(word: word)
     }
-
+    
     public class func unchanging(word: String) {
         sharedInstance.unchanging(word: word)
     }
-
-    class var sharedInstance : Pluralize {
-        return Pluralize()
-    }
-
+    
+    
     private class func regexReplace(input: String, pattern: String, template: String) -> String {
         let regex = try! NSRegularExpression(pattern: pattern, options: .caseInsensitive)
-        let range = NSRange(location: 0, length: input.characters.count)
+        let range = NSMakeRange(0, String(input).count)
         let output = regex.stringByReplacingMatches(in: input, options: [], range: range, withTemplate: template)
         return output
     }
-
-    private func add(rule: String, with template: String) {
+    
+    private func rule(rule: String, with template: String) {
         rules.insert((rule: rule, template: template), at: 0)
     }
-
+    
     private func uncountable(word: String) {
         uncountables.insert(word.lowercased(), at: 0)
     }
-
+    
     private func unchanging(word: String) {
         uncountables.insert(word.lowercased(), at: 0)
     }
@@ -186,13 +185,20 @@ public class Pluralize {
 
 extension String {
     public func pluralize(count: Int = 2, with: String = "") -> String {
-        guard !(count == 1) else { return self }
-        guard with.length != 0 else { return Pluralize.apply(word: self) }
-        return with
+        if count == 1 {
+            return self
+        } else {
+            if with.length != 0 {
+                return with
+            } else {
+                return Pluralize.apply(word: self)
+            }
+        }
     }
-
+    
     // Workaround to allow us to use `count` as an argument name in pluralize() above.
     private var length: Int {
-        return self.characters.count
+        return String(self).count
     }
 }
+
