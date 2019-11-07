@@ -38,7 +38,7 @@ public class Pluralize {
     var uncountables:[String] = []
     var rules:[(rule: String, template: String)] = []
 
-    public init() {
+    private init() {
         uncountables = [
             "access", "accommodation", "adulthood", "advertising", "advice",
             "aggression", "aid", "air", "alcohol", "anger", "applause",
