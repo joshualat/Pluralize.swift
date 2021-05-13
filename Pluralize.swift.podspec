@@ -25,6 +25,7 @@ Pod::Spec.new do |s|
   s.source           = { :git => "https://github.com/sammy-SC/Pluralize.swift.git", :tag => '1.1'}
 
   s.requires_arc = true
+  s.swift_version = '5.0'
   s.watchos.deployment_target = '2.0'
   s.ios.deployment_target = '8.0'
   s.osx.deployment_target = '10.9'
