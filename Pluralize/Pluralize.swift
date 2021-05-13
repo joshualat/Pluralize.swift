@@ -134,7 +134,7 @@ public class Pluralize {
     }
 
     public class func apply(word: String) -> String {
-        guard !(sharedInstance.uncountables.contains(word.lowercased()) || word.characters.count == 0) else {
+        guard !(sharedInstance.uncountables.contains(word.lowercased()) || word.count == 0) else {
             return word
         }
 
@@ -166,7 +166,7 @@ public class Pluralize {
 
     private class func regexReplace(input: String, pattern: String, template: String) -> String {
         let regex = try! NSRegularExpression(pattern: pattern, options: .caseInsensitive)
-        let range = NSRange(location: 0, length: input.characters.count)
+        let range = NSRange(location: 0, length: input.count)
         let output = regex.stringByReplacingMatches(in: input, options: [], range: range, withTemplate: template)
         return output
     }
@@ -193,6 +193,6 @@ extension String {
 
     // Workaround to allow us to use `count` as an argument name in pluralize() above.
     private var length: Int {
-        return self.characters.count
+        return self.count
     }
 }
