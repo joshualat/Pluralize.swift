@@ -25,7 +25,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4A684448264C9B2C002E3ECE /* Pluralize.swift.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; path = Pluralize.swift.podspec; sourceTree = SOURCE_ROOT; };
+		4A684448264C9B2C002E3ECE /* Pluralize.swift.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; path = Pluralize.swift.podspec; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		93198B021A4FE442009D2787 /* Pluralize.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pluralize.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		93198B061A4FE442009D2787 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93198B071A4FE442009D2787 /* Pluralize.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Pluralize.h; sourceTree = "<group>"; };
