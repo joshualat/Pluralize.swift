@@ -96,7 +96,7 @@ Pluralize.rule("were", with: "was")
 Installation
 ------------
 
-**Cocoapods**
+**CocoaPods**
 
 <code>pod 'Pluralize.swift'</code>
 
